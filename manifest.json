@@ -1,0 +1,21 @@
+{
+  "manifest_version": 3,
+  "name": "Positivity Filter",
+  "version": "3.0",
+  "description": "Blocks negative content and offers a positive perspective on hover.",
+  "permissions": ["storage", "scripting"],
+  "host_permissions": ["https://generativelanguage.googleapis.com/*"],
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "css": ["styles.css"] 
+    }
+  ]
+}
