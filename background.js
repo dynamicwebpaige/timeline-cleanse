@@ -11,7 +11,7 @@ async function processText(text) {
 
   if (!apiKey) return { error: "No API Key" };
 
-  const MODEL_ID = "gemini-2.0-flash-lite-preview-02-05";
+  const MODEL_ID = "gemini-2.5-flash-lite";
   const ENDPOINT = `https://generativelanguage.googleapis.com/v1beta/models/${MODEL_ID}:generateContent?key=${apiKey}`;
 
   // SIMPLIFIED PROMPT: Just detect negativity
